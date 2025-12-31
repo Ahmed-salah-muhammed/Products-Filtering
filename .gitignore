@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+
+# Package lock
+package-lock.json
+package.json
+
+# Tailwind config
+tailwind.config.js
+
+# Logs
+*.log

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Tech Store</title>
+  </head>
+
+  <body class="text-white bg-gray-800">
+    <nav class="mb-6 p-4 bg-gray-900">
+      <div
+        class="container max-w-6xl mx-auto flex flex-col items-center gap-8 sm:flex-row"
+      >
+        <!-- search area -->
+        <div class="relative w-full">
+          <input
+            type="text"
+            id="search"
+            class="bg-gray-700 rounded-full p-2 pl-10 focus:w-full"
+            placeholder="Search for products"
+          />
+          <svg
+            class="absolute left-2 top-1/2 -translate-y-1/2"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+              d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"
+            />
+          </svg>
+        </div>
+        <!-- cart icon -->
+        <div class="relative text-center sm:flex flex-row gap-4">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
+            />
+          </svg>
+          <small
+            id="cart-count"
+            class="bg-red-500 rounded-full text-xs text-white w-4 h-4 absolute -top-2 -right-2"
+            >0
+          </small>
+        </div>
+      </div>
+    </nav>
+    <main
+      class="main flex flex-col mx-auto md:flex-row container max-w-6xl gap-4"
+    >
+      <!-- FILTERS SIDEBAR -->
+      <div class="space-y-4 p-2 w-full md:max-w-40">
+        <h2 class="text-2xl">Filters</h2>
+        <h3 class="text-xl">Category</h3>
+        <div id="Filters-container" class="text-xl space-y-2">
+          <div>
+            <input type="checkbox" class="check" id="cameras" />
+            <label for="cameras">Cameras</label>
+          </div>
+
+          <div>
+            <input type="checkbox" class="check" id="smartphones" />
+            <label for="smartphones">Smartphones</label>
+          </div>
+
+          <div>
+            <input type="checkbox" class="check" id="games" />
+            <label for="games">Games</label>
+          </div>
+
+          <div>
+            <input type="checkbox" class="check" id="televisions" />
+            <label for="televisions">Televisions</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCTS GRID  -->
+      <div
+        id="Products-Wrapper"
+        class="flex-1 grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 p-4"
+      >
+        </div>
+      </div>
+    </main>
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="fixed right-0 top-0 h-full w-80 bg-gray-900 text-white shadow-lg transform translate-x-full transition-transform z-50 p-4 overflow-y-auto">
+      <h2 class="text-2xl mb-4">Your Cart</h2>
+      <ul id="cart-items" class="space-y-2"></ul>
+      <div class="mt-4 border-t border-gray-700 pt-4">
+        <strong>Total: $<span id="cart-total">0.00</span></strong>
+      </div>
+      <button id="close-cart" class="mt-4 bg-red-600 w-full py-2 rounded cursor-pointer">Close</button>
+    </div>
+    <!-- Cart Toggle Button -->
+    <button id="open-cart" class="fixed bottom-4 right-4 bg-red-600 text-white p-4 rounded-full shadow-lg z-50 cursor-pointer">Your Products</button>
+
+    <!-- defer = حماية من Errors + كود نضيف + راحة دماغ -->
+    <script src="script.js" defer></script>
+  </body>
+</html>
