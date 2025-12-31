@@ -112,9 +112,11 @@ function createProductElement(product) {
       <img src=${product.url} alt=${
     product.name
   } class="w-full h-full object-cover" />
-      <button class="status bg-black text-white absolute bottom-0 left-0 right-0 text-center py-2 translate-y-full transition group-hover:translate-y-0 cursor-pointer">
-        Add to cart
-      </button>
+      
+    <button class="status bg-black text-white absolute bottom-0 left-0 right-0 text-center py-2 translate-y-0 md:translate-y-full transition group-hover:translate-y-0 cursor-pointer">
+      Add to Cart
+    </button>
+
     </div>
     <p class="text-xl">${product.name}</p>
     <strong>$${product.price.toLocaleString()}</strong>
